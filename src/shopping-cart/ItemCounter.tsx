@@ -25,6 +25,8 @@ const ItemCounter = ( { name: productName, quantity: itemQuantity = 1 }: Props )
         setCount(count - 1);
     }
 
+    
+
     return (
         <section 
             className={ styles['item-row'] }

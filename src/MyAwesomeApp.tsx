@@ -1,23 +1,32 @@
 import type { CSSProperties } from "react";
 
-const name = 'John'
+const firstname = 'John'
 const lastname = 'Tutistar'
 
-const numberArray = [1,2,3,4];
+const favoriteGames = ['Fortnite', 'Crash car', 'Metal Gear'];
+const isActive = false;
+
+const address = {
+    zipCode: 'ABC-123',
+    country: 'Canada'
+}
 
 const myStyles: CSSProperties = {
-    color: 'red',
-    padding: 12,
+    backgroundColor: '#fafafa',
+    borderRadius: 'red',
+    padding: 10,
     marginTop: 3
 }
 
 export function MyAwesomeApp(){
     return (
         <>
-            <h1>{ name }</h1>
+            <h1>{ firstname }</h1>
             <h3>{ lastname }</h3>
-            <p> { numberArray.map( element => element * 2 ) } </p>
-            <p style={ myStyles }>{ numberArray.join(', ') }</p>
+            <p> { favoriteGames.join('') } </p>
+            <h1>{isActive ? 'Activo' : 'No activo'}</h1>
+
+            <p style={myStyles}>{JSON.stringify(address)}</p>
         </>
     )
 }
